@@ -7,6 +7,10 @@ const rl = createInterface({
 
 rl.question("数値を入力してください:", (line) => {
   const num = Number(line);
-  console.log(`${num + 1000}が入力されました`);
+  if (0 <= num && num < 100) {
+    console.log(`${num}は0以上100未満です`);
+  } else {
+    console.log(`${num}は0以上100未満ではありません`);
+  }
   rl.close();
 });
